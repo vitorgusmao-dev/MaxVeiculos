@@ -1,0 +1,436 @@
+/* ============================================
+   MaxVeículos - Estilos Principais
+   CORRIGIDO: Banner com altura fixa e sem estouro
+   ============================================ */
+
+/* Variáveis globais (cores) */
+:root {
+    --amarelo: #FFD000;
+    --preto: #0B0B0B;
+    --branco: #FFFFFF;
+    --cinza-claro: #f5f5f5;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--preto);
+    background-color: var(--branco);
+}
+
+/* ========== CABEÇALHO (NAVBAR) ========== */
+.navbar {
+    background-color: var(--preto) !important;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--branco) !important;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-brand i {
+    color: var(--amarelo);
+}
+
+/* Estilo da logo imagem */
+.logo-img {
+    height: 70px;      /* Ajuste conforme sua logo */
+    width: auto;
+}
+
+.nav-link {
+    color: var(--branco) !important;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--amarelo) !important;
+}
+
+/* Botão Admin (cabeçalho) */
+.btn-admin {
+    background-color: var(--amarelo);
+    color: var(--preto) !important;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn-admin:hover {
+    background-color: #e6bc00;
+    transform: translateY(-2px);
+    color: var(--preto);
+}
+
+/* ========== BANNER SLIDER - CORRIGIDO ========== */
+/* Container principal do slider - altura fixa, sem estouro */
+.banner-slider {
+    height: 450px;           /* Altura fixa para desktop */
+    max-height: 450px;
+    overflow: hidden;       /* Impede qualquer conteúdo de vazar */
+    margin-bottom: 40px;
+    position: relative;
+    background-color: var(--preto);
+}
+
+/* Cada slide ocupa 100% do container */
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: var(--preto);
+}
+
+/* Imagem dentro do slide - cobre o espaço sem distorcer */
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* Preenche o container, corta se necessário */
+    object-position: center;
+    display: block;
+}
+
+/* Overlay escuro sobre o banner (melhora legibilidade do texto) */
+.swiper-slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    pointer-events: none;   /* Permite clicar nos botões por cima */
+    z-index: 1;
+}
+
+/* Conteúdo textual do banner (centralizado) */
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--branco);
+    z-index: 2;
+    width: 80%;
+    max-width: 600px;
+}
+
+.banner-content h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.banner-content .btn {
+    background-color: var(--amarelo);
+    color: var(--preto) !important;
+    font-weight: bold;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.banner-content .btn:hover {
+    background-color: #e6bc00;
+    transform: scale(1.05);
+}
+
+/* Setas de navegação do Swiper */
+.swiper-button-next, 
+.swiper-button-prev {
+    color: var(--amarelo);
+    z-index: 3;
+}
+
+/* Paginação (bolinhas) ativa */
+.swiper-pagination-bullet-active {
+    background: var(--amarelo);
+}
+
+/* ========== SEÇÃO VEÍCULOS EM DESTAQUE ========== */
+.destaque-section {
+    padding: 60px 0;
+    background: var(--cinza-claro);
+}
+
+.section-title h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--preto);
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Card do veículo */
+.veiculo-card {
+    background: var(--branco);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eee;
+}
+
+.veiculo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagem do veículo */
+.veiculo-imagem {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: #e0e0e0;
+    position: relative;
+}
+
+.veiculo-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.veiculo-card:hover .veiculo-imagem img {
+    transform: scale(1.05);
+}
+
+/* Badge "Destaque" */
+.badge-destaque {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--amarelo);
+    color: var(--preto);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 12px;
+    z-index: 1;
+}
+
+/* Informações do veículo */
+.veiculo-info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.veiculo-nome {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--preto);
+    margin-bottom: 8px;
+}
+
+.veiculo-especificacoes {
+    font-size: 13px;
+    color: #999;
+    margin-bottom: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.veiculo-especificacoes span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.veiculo-preco {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--amarelo);
+    margin-bottom: 15px;
+}
+
+/* Botões de ação do card */
+.veiculo-acoes {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.veiculo-acoes .btn {
+    flex: 1;
+    padding: 10px;
+    font-weight: 600;
+}
+
+.btn-detalhes {
+    background-color: var(--amarelo);
+    color: var(--preto) !important;
+    border: none;
+}
+
+.btn-detalhes:hover {
+    background-color: #e6bc00;
+    color: var(--preto);
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    color: white !important;
+}
+
+.btn-whatsapp:hover {
+    background-color: #20b85a;
+}
+
+/* Botão "Ver Todos os Veículos" */
+.btn-mais-veiculos {
+    background-color: var(--preto);
+    color: var(--branco) !important;
+    border: none;
+    padding: 12px 30px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-mais-veiculos:hover {
+    background-color: #2a2a2a;
+    color: var(--amarelo);
+}
+
+/* ========== RODAPÉ (FOOTER) ========== */
+.footer {
+    background: var(--preto);
+    color: var(--branco);
+    padding: 50px 0 20px;
+    margin-top: 60px;
+}
+
+.footer-section h5 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--amarelo);
+}
+
+.footer-section a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: var(--amarelo);
+}
+
+.footer-bottom {
+    border-top: 1px solid #2c2c2c;
+    padding-top: 20px;
+    margin-top: 30px;
+    text-align: center;
+    color: #bbb;
+}
+
+/* Redes sociais */
+.redes-sociais a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: var(--branco);
+    transition: all 0.3s;
+}
+
+.redes-sociais a:hover {
+    background: var(--amarelo);
+    color: var(--preto);
+    transform: scale(1.1);
+}
+
+/* ========== RESPONSIVIDADE (MOBILE) ========== */
+@media (max-width: 768px) {
+    .banner-slider {
+        height: 300px;      /* Altura menor no celular */
+        max-height: 300px;
+    }
+    .banner-content h1 {
+        font-size: 24px;
+    }
+    .banner-content p {
+        font-size: 14px;
+    }
+    .banner-content .btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+    .section-title h2 {
+        font-size: 28px;
+    }
+    .veiculo-imagem {
+        height: 200px;
+    }
+}
+/* ========== FORÇAR ALTURA DO BANNER - NÃO ESTOURA ========== */
+.banner-slider,
+.swiper,
+.swiper-wrapper,
+.swiper-slide {
+    height: 450px !important;
+    max-height: 450px !important;
+    min-height: 450px !important;
+}
+
+.banner-slider {
+    overflow: hidden !important;
+    margin-bottom: 40px !important;
+}
+
+.swiper-slide img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .banner-slider,
+    .swiper,
+    .swiper-wrapper,
+    .swiper-slide {
+        height: 300px !important;
+        max-height: 300px !important;
+        min-height: 300px !important;
+    }
+}

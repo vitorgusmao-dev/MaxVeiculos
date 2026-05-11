@@ -1,0 +1,15 @@
+# Arquivos de configuração com senhas
+.env
+config.php
+
+# Arquivos de log que podem ter informações acidentais
+*.log
+error_log
+
+# Pastas de cache e dependências que são enormes
+/cache
+/vendor
+
+# Arquivos de configuração do seu editor
+.idea/
+.vscode/

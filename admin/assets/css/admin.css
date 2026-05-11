@@ -1,0 +1,76 @@
+/* ============================================
+   Painel Administrativo - MaxVeículos
+   Cores: Amarelo (#FFD000), Preto (#0B0B0B), Branco (#FFFFFF)
+   ============================================ */
+
+/* Barra lateral (se houver) ou navbar do admin */
+.admin-navbar {
+    background-color: var(--preto, #0B0B0B) !important;
+}
+
+.admin-navbar .navbar-brand,
+.admin-navbar .nav-link {
+    color: var(--branco, #FFFFFF) !important;
+}
+
+.admin-navbar .nav-link:hover {
+    color: var(--amarelo, #FFD000) !important;
+}
+
+/* Botões principais */
+.btn-primary {
+    background-color: var(--amarelo, #FFD000) !important;
+    border-color: var(--amarelo, #FFD000) !important;
+    color: var(--preto, #0B0B0B) !important;
+    font-weight: bold;
+}
+.btn-primary:hover {
+    background-color: #e6bc00 !important;
+    border-color: #e6bc00 !important;
+    color: var(--preto, #0B0B0B) !important;
+}
+
+.btn-outline-primary {
+    border-color: var(--amarelo, #FFD000) !important;
+    color: var(--amarelo, #FFD000) !important;
+}
+.btn-outline-primary:hover {
+    background-color: var(--amarelo, #FFD000) !important;
+    color: var(--preto, #0B0B0B) !important;
+}
+
+/* Cards de estatísticas */
+.card-stats {
+    border-left: 4px solid var(--amarelo, #FFD000);
+    transition: transform 0.2s;
+}
+.card-stats:hover {
+    transform: translateY(-5px);
+}
+.card-stats .card-icon {
+    color: var(--amarelo, #FFD000);
+    opacity: 0.2;
+}
+
+/* Badges e indicadores */
+.badge.bg-info {
+    background-color: var(--amarelo, #FFD000) !important;
+    color: var(--preto, #0B0B0B) !important;
+}
+
+/* Tabelas e cards */
+.card-header.bg-light {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid var(--amarelo, #FFD000);
+}
+.card-header h5 {
+    color: var(--preto, #0B0B0B);
+}
+
+/* Links */
+a {
+    color: var(--preto, #0B0B0B);
+}
+a:hover {
+    color: var(--amarelo, #FFD000);
+}
