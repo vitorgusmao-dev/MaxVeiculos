@@ -126,40 +126,37 @@ Clique em "Meu Perfil"
 
 Altere sua senha
 
-📁 Estrutura do Projeto
-text
-<<<<<<< HEAD
-=======
+## 📁 Estrutura do Projeto
 
->>>>>>> 856ab91ecef96d20660a663e93d17a3a0c0c4b76
+```text
 MaxVeiculos/
 ├── admin/
 │   ├── assets/
 │   │   ├── css/
 │   │   └── js/
 │   ├── pages/
-│   │   ├── veiculos.php
-│   │   ├── banners.php
 │   │   ├── atividades.php
-│   │   └── perfil.php
+│   │   ├── banners.php
+│   │   ├── perfil.php
+│   │   └── veiculos.php
 │   ├── uploads/
-│   ├── header.php
+│   ├── dashboard.php
 │   ├── footer.php
+│   ├── header.php
 │   ├── login.php
-│   ├── logout.php
-│   └── dashboard.php
+│   └── logout.php
+├── database/
+│   └── schema.sql
+├── includes/
+│   └── config.php
 ├── public/
 │   ├── assets/
 │   │   ├── css/
 │   │   └── js/
 │   ├── uploaded_images/
+│   ├── detalhes.php
 │   ├── index.php
-│   ├── veiculos.php
-│   └── detalhes.php
-├── includes/
-│   └── config.php
-├── database/
-│   └── schema.sql
+│   └── veiculos.php
 ├── .htaccess
 └── README.md
 
@@ -325,3 +322,7 @@ Dúvidas ou Sugestões?
 Entre em contato através do formulário de contato do site ou envie um e-mail.
 
 Obrigado por usar MaxVeículos! 🚗
+
+text
+
+---
