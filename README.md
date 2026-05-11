@@ -1,3 +1,4 @@
+markdown
 # MaxVeículos - Sistema de Revenda de Veículos
 
 ## 📋 Descrição
@@ -63,7 +64,6 @@ Sistema completo para gerenciamento de revenda de veículos com site público (v
    C:\wamp\www\MaxVeiculos\      (WAMP)
 Passo 2: Criar o Banco de Dados
 Abra phpMyAdmin
-
 Acesse: http://localhost/phpmyadmin
 
 Importe o arquivo SQL
@@ -107,13 +107,10 @@ chmod 755 public/uploaded_images/
 chmod 755 admin/uploads/
 Passo 5: Acessar o Sistema
 Site Público (Vitrine)
-
 URL: http://localhost/MaxVeiculos/
-
 ou: http://localhost/MaxVeiculos/public/index.php
 
 Painel Administrativo
-
 URL: http://localhost/MaxVeiculos/admin/login.php
 
 🔐 Credenciais Padrão
@@ -208,15 +205,7 @@ Acesse: Admin → Veículos
 
 Clique em: "Adicionar Novo Veículo"
 
-Preencha os campos obrigatórios:
-
-Marca
-
-Modelo
-
-Ano
-
-Preço
+Preencha os campos obrigatórios: Marca, Modelo, Ano, Preço
 
 Adicione as fotos do veículo
 
@@ -227,15 +216,7 @@ Acesse: Admin → Banners
 
 Clique em: "Adicionar Novo Banner"
 
-Preencha os dados:
-
-Título
-
-Descrição (opcional)
-
-Upload da imagem (obrigatório)
-
-Link de destino (opcional)
+Preencha os dados: Título, Descrição (opcional), Upload da imagem (obrigatório), Link de destino (opcional)
 
 Ative ou desative o banner conforme necessário
 
@@ -244,15 +225,7 @@ Clique em: "Salvar Banner"
 Visualizar Estatísticas
 Acesse: Admin → Dashboard
 
-Visualize:
-
-Total de veículos em estoque
-
-Veículos em destaque
-
-Total de banners ativos
-
-Últimas atividades do sistema
+Visualize: total de veículos em estoque, veículos em destaque, total de banners ativos, últimas atividades
 
 Consultar Log de Atividades
 Acesse: Admin → Atividades
@@ -265,26 +238,18 @@ Para o Usuário Final
 Buscar Um Veículo
 Acesse a seção "Veículos"
 
-Use os filtros disponíveis:
-
-Marca
-
-Modelo
-
-Ano
-
-Preço mínimo/máximo
+Use os filtros disponíveis: Marca, Modelo, Ano, Preço mínimo/máximo
 
 Clique em "Filtrar"
 
-Navegue pelos resultados com as páginas
+Navegue pelos resultados
 
 Ver Detalhes de um Veículo
 Clique no botão "Detalhes" do veículo
 
 Veja todas as informações e especificações
 
-Explore a galeria de fotos (zoom, slideshow)
+Explore a galeria de fotos
 
 Clique em "Solicitar via WhatsApp" para entrar em contato
 
@@ -327,9 +292,7 @@ Restaurar:
 
 bash
 mysql -u root -p max_veiculos < backup.sql
-Atualizações Futuras
-Possíveis melhorias:
-
+🚀 Atualizações Futuras (sugestões)
 Sistema de avaliações de veículos
 
 Chat em tempo real
