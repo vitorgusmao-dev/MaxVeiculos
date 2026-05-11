@@ -128,7 +128,6 @@ Altere sua senha
 
 📁 Estrutura do Projeto
 text
-text
 MaxVeiculos/
 ├── admin/
 │   ├── assets/
