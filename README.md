@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # MaxVeículos - Sistema de Revenda de Veículos
 
 ## 📋 Descrição
@@ -58,82 +57,80 @@ Sistema completo para gerenciamento de revenda de veículos com site público (v
 1. **Instale XAMPP ou WAMP** (se ainda não o fez)
    - Download: https://www.apachefriends.org/
 
-2. **Coloque os arquivos do projeto na pasta www (XAMPP) ou www (WAMP)**
+2. **Coloque os arquivos do projeto na pasta htdocs (XAMPP) ou www (WAMP)**
    ```bash
    C:\xampp\htdocs\MaxVeiculos\  (XAMPP)
    C:\wamp\www\MaxVeiculos\      (WAMP)
-   ```
+Passo 2: Criar o Banco de Dados
+Abra phpMyAdmin
 
-### Passo 2: Criar o Banco de Dados
+Acesse: http://localhost/phpmyadmin
 
-1. **Abra phpMyAdmin**
-   - Acesse: http://localhost/phpmyadmin
+Importe o arquivo SQL
 
-2. **Importe o arquivo SQL**
-   - Vá em: Importar
-   - Selecione o arquivo: `database/schema.sql`
-   - Clique em: Importar
+Vá em: Importar
 
-   Alternativamente, execute no terminal MySQL:
-   ```bash
-   mysql -u root -p < database\schema.sql
-   ```
+Selecione o arquivo: database/schema.sql
 
-### Passo 3: Configurar o Arquivo config.php
+Clique em: Importar
 
-1. **Abra o arquivo**: `includes/config.php`
+Alternativamente, execute no terminal MySQL:
 
-2. **Atualize as credenciais do banco de dados** (se necessário):
-   ```php
-   define('DB_HOST', 'localhost');
-   define('DB_USER', 'root');
-   define('DB_PASS', '');  // Sua senha do MySQL
-   define('DB_NAME', 'max_veiculos');
-   ```
+bash
+mysql -u root -p < database\schema.sql
+Passo 3: Configurar o Arquivo config.php
+Abra o arquivo: includes/config.php
 
-3. **Altere a URL base** conforme seu servidor:
-   ```php
-   define('BASE_URL', 'http://localhost/MaxVeiculos');
-   ```
+Atualize as credenciais do banco de dados (se necessário):
 
-### Passo 4: Configurar Permissões de Pasta
+php
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASS', '');  // Sua senha do MySQL
+define('DB_NAME', 'max_veiculos');
+Altere a URL base conforme seu servidor:
 
+php
+define('BASE_URL', 'http://localhost/MaxVeiculos');
+Passo 4: Configurar Permissões de Pasta
 As seguintes pastas precisam de permissão de escrita:
-- `public/uploaded_images/` (fotos dos veículos)
-- `admin/uploads/` (fotos dos banners)
 
-**Windows (geralmente automático)**
-**Linux/Mac:**
-```bash
+public/uploaded_images/ (fotos dos veículos)
+
+admin/uploads/ (fotos dos banners)
+
+Windows (geralmente automático)
+Linux/Mac:
+
+bash
 chmod 755 public/uploaded_images/
 chmod 755 admin/uploads/
-```
+Passo 5: Acessar o Sistema
+Site Público (Vitrine)
 
-### Passo 5: Acessar o Sistema
+URL: http://localhost/MaxVeiculos/
 
-1. **Site Público (Vitrine)**
-   - URL: http://localhost/MaxVeiculos/
-   - ou: http://localhost/MaxVeiculos/public/index.php
+ou: http://localhost/MaxVeiculos/public/index.php
 
-2. **Painel Administrativo**
-   - URL: http://localhost/MaxVeiculos/admin/login.php
+Painel Administrativo
 
-## 🔐 Credenciais Padrão
+URL: http://localhost/MaxVeiculos/admin/login.php
 
-**Usuário:** admin  
-**Senha:** admin123  
+🔐 Credenciais Padrão
+Usuário: admin
+Senha: admin123
 
-⚠️ **Importante:** Altere essas credenciais na primeira vez que acessar o painel administrativo!
+⚠️ Importante: Altere essas credenciais na primeira vez que acessar o painel administrativo!
 
-### Para alterar a senha padrão:
+Para alterar a senha padrão:
+Acesse o painel admin
 
-1. Acesse o painel admin
-2. Clique em "Meu Perfil"
-3. Altere sua senha
+Clique em "Meu Perfil"
 
-## 📁 Estrutura do Projeto
+Altere sua senha
 
-```
+📁 Estrutura do Projeto
+text
 MaxVeiculos/
 ├── admin/
 │   ├── assets/
@@ -164,165 +161,199 @@ MaxVeiculos/
 │   └── schema.sql       # Script SQL do banco de dados
 ├── .htaccess            # Configuração de URLs amigáveis
 └── README.md            # Este arquivo
-```
+🗂️ Banco de Dados
+Tabelas Criadas
+admin - Usuários administradores
 
-## 🗂️ Banco de Dados
+veiculos - Registro de veículos
 
-### Tabelas Criadas
+veiculo_fotos - Fotos dos veículos
 
-1. **admin** - Usuários administradores
-2. **veiculos** - Registro de veículos
-3. **veiculo_fotos** - Fotos dos veículos
-4. **banners** - Banners de publicidade
-5. **logs_atividades** - Log de ações dos admins
+banners - Banners de publicidade
 
-## 🔒 Segurança Implementada
+logs_atividades - Log de ações dos admins
 
-### Autenticação e Autorização
-- ✅ Verificação de sessão em todas as páginas do admin
-- ✅ Redirecionamento automático para login se não autenticado
-- ✅ Logout automático ao fechar navegador (sessão)
+🔒 Segurança Implementada
+Autenticação e Autorização
+✅ Verificação de sessão em todas as páginas do admin
 
-### Proteção de Dados
-- ✅ Senhas com hash bcrypt (password_hash)
-- ✅ Sanitização de entradas do usuário
-- ✅ Proteção contra SQL Injection (prepared statements)
-- ✅ Token CSRF (implementado)
-- ✅ Headers de segurança HTTP
+✅ Redirecionamento automático para login se não autenticado
 
-### Proteção de Arquivos
-- ✅ .htaccess bloqueia acesso direto a arquivos sensíveis
-- ✅ Validação de tipo de arquivo no upload
-- ✅ Nomes de arquivo únicos e aleatórios
-- ✅ Proteção contra acesso de diretórios
+✅ Logout automático ao fechar navegador (sessão)
 
-## 📝 Guia de Uso
+Proteção de Dados
+✅ Senhas com hash bcrypt (password_hash)
 
-### Para o Administrador
+✅ Sanitização de entradas do usuário
 
-#### Adicionar um Novo Veículo
+✅ Proteção contra SQL Injection (prepared statements)
 
-1. Acesse: Admin → Veículos
-2. Clique em: "Adicionar Novo Veículo"
-3. Preencha os campos obrigatórios:
-   - Marca
-   - Modelo
-   - Ano
-   - Preço
-4. Adicione as fotos do veículo
-5. Clique em: "Salvar Veículo"
+✅ Token CSRF (implementado)
 
-#### Gerenciar Banners
+✅ Headers de segurança HTTP
 
-1. Acesse: Admin → Banners
-2. Clique em: "Adicionar Novo Banner"
-3. Preencha os dados:
-   - Título
-   - Descrição (opcional)
-   - Upload da imagem (obrigatório)
-   - Link de destino (opcional)
-4. Ative ou desative o banner conforme necessário
-5. Clique em: "Salvar Banner"
+Proteção de Arquivos
+✅ .htaccess bloqueia acesso direto a arquivos sensíveis
 
-#### Visualizar Estatísticas
+✅ Validação de tipo de arquivo no upload
 
-1. Acesse: Admin → Dashboard
-2. Visualize:
-   - Total de veículos em estoque
-   - Veículos em destaque
-   - Total de banners ativos
-   - Últimas atividades do sistema
+✅ Nomes de arquivo únicos e aleatórios
 
-#### Consultar Log de Atividades
+✅ Proteção contra acesso de diretórios
 
-1. Acesse: Admin → Atividades
-2. Veja todas as ações realizadas no sistema
-3. Filtre por data, usuário ou ação se necessário
+📝 Guia de Uso
+Para o Administrador
+Adicionar um Novo Veículo
+Acesse: Admin → Veículos
 
-### Para o Usuário Final
+Clique em: "Adicionar Novo Veículo"
 
-#### Buscar Um Veículo
+Preencha os campos obrigatórios:
 
-1. Acesse a seção "Veículos"
-2. Use os filtros disponíveis:
-   - Marca
-   - Modelo
-   - Ano
-   - Preço mínimo/máximo
-3. Clique em "Filtrar"
-4. Navegue pelos resultados com as páginas
+Marca
 
-#### Ver Detalhes de um Veículo
+Modelo
 
-1. Clique no botão "Detalhes" do veículo
-2. Veja todas as informações e especificações
-3. Explore a galeria de fotos (zoom, slideshow)
-4. Clique em "Solicitar via WhatsApp" para entrar em contato
+Ano
 
-## 🐛 Troubleshooting
+Preço
 
-### Erro: "Erro ao conectar ao banco de dados"
-- Verifique se o servidor MySQL está rodando
-- Confirme as credenciais em `config.php`
-- Certifique-se de que o banco `max_veiculos` foi criado
+Adicione as fotos do veículo
 
-### Erro: "Acesso negado ao fazer upload"
-- Verifique as permissões das pastas `public/uploaded_images/` e `admin/uploads/`
-- Use `chmod 755` no Linux/Mac
-- Verifique se o servidor web tem permissão de escrita
+Clique em: "Salvar Veículo"
 
-### URLs estão mostrando "404"
-- Verifique se `mod_rewrite` está ativado (Apache)
-- Confirme que `.htaccess` está Na raiz do projeto
-- Reinicie o servidor web
+Gerenciar Banners
+Acesse: Admin → Banners
 
-### Admin não consegue fazer login
-- Limpe os cookies do navegador
-- Tente em modo anônimo
-- Verifique se a tabela `admin` foi criada corretamente
+Clique em: "Adicionar Novo Banner"
 
-## 📞 Suporte e Manutenção
+Preencha os dados:
 
-### Backup do Banco de Dados
+Título
 
-**Windows (Command Prompt):**
-```bash
+Descrição (opcional)
+
+Upload da imagem (obrigatório)
+
+Link de destino (opcional)
+
+Ative ou desative o banner conforme necessário
+
+Clique em: "Salvar Banner"
+
+Visualizar Estatísticas
+Acesse: Admin → Dashboard
+
+Visualize:
+
+Total de veículos em estoque
+
+Veículos em destaque
+
+Total de banners ativos
+
+Últimas atividades do sistema
+
+Consultar Log de Atividades
+Acesse: Admin → Atividades
+
+Veja todas as ações realizadas no sistema
+
+Filtre por data, usuário ou ação se necessário
+
+Para o Usuário Final
+Buscar Um Veículo
+Acesse a seção "Veículos"
+
+Use os filtros disponíveis:
+
+Marca
+
+Modelo
+
+Ano
+
+Preço mínimo/máximo
+
+Clique em "Filtrar"
+
+Navegue pelos resultados com as páginas
+
+Ver Detalhes de um Veículo
+Clique no botão "Detalhes" do veículo
+
+Veja todas as informações e especificações
+
+Explore a galeria de fotos (zoom, slideshow)
+
+Clique em "Solicitar via WhatsApp" para entrar em contato
+
+🐛 Troubleshooting
+Erro: "Erro ao conectar ao banco de dados"
+Verifique se o servidor MySQL está rodando
+
+Confirme as credenciais em config.php
+
+Certifique-se de que o banco max_veiculos foi criado
+
+Erro: "Acesso negado ao fazer upload"
+Verifique as permissões das pastas public/uploaded_images/ e admin/uploads/
+
+Use chmod 755 no Linux/Mac
+
+Verifique se o servidor web tem permissão de escrita
+
+URLs estão mostrando "404"
+Verifique se mod_rewrite está ativado (Apache)
+
+Confirme que .htaccess está na raiz do projeto
+
+Reinicie o servidor web
+
+Admin não consegue fazer login
+Limpe os cookies do navegador
+
+Tente em modo anônimo
+
+Verifique se a tabela admin foi criada corretamente
+
+📞 Suporte e Manutenção
+Backup do Banco de Dados
+Windows (Command Prompt):
+
+bash
 mysqldump -u root -p max_veiculos > backup.sql
-```
+Restaurar:
 
-**Restaurar:**
-```bash
+bash
 mysql -u root -p max_veiculos < backup.sql
-```
-
-### Atualizações Futuras
-
+Atualizações Futuras
 Possíveis melhorias:
-- [ ] Sistema de avaliações de veículos
-- [ ] Chat em tempo real
-- [ ] Agendamento de test drive
-- [ ] Sistema de e-mail automático
-- [ ] API REST para integração com mobile
-- [ ] Dark mode
-- [ ] Multtidário idiomas
 
-## 📄 Licença
+Sistema de avaliações de veículos
 
+Chat em tempo real
+
+Agendamento de test drive
+
+Sistema de e-mail automático
+
+API REST para integração com mobile
+
+Dark mode
+
+Múltiplos idiomas
+
+📄 Licença
 Este projeto é fornecido como está, sem garantias. Sinta-se livre para usar, modificar e distribuir.
 
-## 👨‍💻 Desenvolvimento
+👨‍💻 Desenvolvimento
+Desenvolvido como um sistema moderno de gerenciamento de revenda de veículos.
 
-Desenvolvido como um sistema móderno de gerenciamento de revenda de veículos.
+Versão: 1.0
+Última Atualização: 2024
 
-**Versão:** 1.0  
-**Última Atualização:** 2024
-
----
-
-**Dúvidas ou Sugestões?**  
+Dúvidas ou Sugestões?
 Entre em contato através do formulário de contato do site ou envie um e-mail.
 
 Obrigado por usar MaxVeículos! 🚗
-=======
-# MaxVeiculos
->>>>>>> 30f771acf0043d7ec63ff8f403b7e40ef322febe
