@@ -128,7 +128,7 @@ Altere sua senha
 
 📁 Estrutura do Projeto
 text
-text
+
 MaxVeiculos/
 ├── admin/
 │   ├── assets/
@@ -159,6 +159,7 @@ MaxVeiculos/
 │   └── schema.sql
 ├── .htaccess
 └── README.md
+
 🗂️ Banco de Dados
 Tabelas Criadas
 admin - Usuários administradores
