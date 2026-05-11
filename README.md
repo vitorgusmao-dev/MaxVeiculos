@@ -134,33 +134,33 @@ text
 MaxVeiculos/
 ├── admin/
 │   ├── assets/
-│   │   ├── css/         # Estilos do admin
-│   │   └── js/          # Scripts do admin
+│   │   ├── css/
+│   │   └── js/
 │   ├── pages/
-│   │   ├── veiculos.php # Gerenciamento de veículos
-│   │   ├── banners.php  # Gerenciamento de banners
+│   │   ├── veiculos.php
+│   │   ├── banners.php
 │   │   ├── atividades.php
 │   │   └── perfil.php
-│   ├── uploads/         # Pasta para uploads (banners)
-│   ├── header.php       # Header padrão do admin
-│   ├── footer.php       # Footer padrão do admin
-│   ├── login.php        # Tela de login
-│   ├── logout.php       # Logout
-│   └── dashboard.php    # Dashboard principal
+│   ├── uploads/
+│   ├── header.php
+│   ├── footer.php
+│   ├── login.php
+│   ├── logout.php
+│   └── dashboard.php
 ├── public/
 │   ├── assets/
 │   │   ├── css/
 │   │   └── js/
-│   ├── uploaded_images/ # Pasta para fotos dos veículos
-│   ├── index.php        # Homepage do site público
-│   ├── veiculos.php     # Listagem de veículos
-│   └── detalhes.php     # Página de detalhes do veículo
+│   ├── uploaded_images/
+│   ├── index.php
+│   ├── veiculos.php
+│   └── detalhes.php
 ├── includes/
-│   └── config.php       # Configurações e funções globais
+│   └── config.php
 ├── database/
-│   └── schema.sql       # Script SQL do banco de dados
-├── .htaccess            # Configuração de URLs amigáveis
-└── README.md            # Este arquivo
+│   └── schema.sql
+├── .htaccess
+└── README.md
 🗂️ Banco de Dados
 Tabelas Criadas
 admin - Usuários administradores
