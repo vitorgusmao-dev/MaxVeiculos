@@ -118,7 +118,7 @@ URL: http://localhost/MaxVeiculos/admin/login.php
 
 🔐 Credenciais Padrão
 Usuário: admin
-Senha: admin123
+Senha: password
 
 ⚠️ Importante: Altere essas credenciais na primeira vez que acessar o painel administrativo!
 
@@ -351,7 +351,7 @@ Este projeto é fornecido como está, sem garantias. Sinta-se livre para usar, m
 Desenvolvido como um sistema moderno de gerenciamento de revenda de veículos.
 
 Versão: 1.0
-Última Atualização: 2024
+Última Atualização: 2026
 
 Dúvidas ou Sugestões?
 Entre em contato através do formulário de contato do site ou envie um e-mail.
