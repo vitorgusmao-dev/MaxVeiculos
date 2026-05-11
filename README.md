@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MaxVeículos - Sistema de Revenda de Veículos
 
 ## 📋 Descrição
@@ -322,3 +323,6 @@ Desenvolvido como um sistema móderno de gerenciamento de revenda de veículos.
 Entre em contato através do formulário de contato do site ou envie um e-mail.
 
 Obrigado por usar MaxVeículos! 🚗
+=======
+# MaxVeiculos
+>>>>>>> 30f771acf0043d7ec63ff8f403b7e40ef322febe
