@@ -1,8 +1,8 @@
 -- MaxVeículos - Database Schema
 -- Este script cria todas as tabelas necessárias para o sistema
 
-CREATE DATABASE IF NOT EXISTS max_veiculos;
-USE max_veiculos;
+-- CREATE DATABASE IF NOT EXISTS max_veiculos;
+-- USE max_veiculos;
 
 -- Tabela de Administradores
 CREATE TABLE IF NOT EXISTS admin (

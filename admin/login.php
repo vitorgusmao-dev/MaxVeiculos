@@ -188,8 +188,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
 
         <div class="login-footer">
-            <p>Credenciais padrão: <strong>admin</strong> / <strong>123456</strong></p>
-        </div>
+    <p>Entre com suas credenciais de acesso</p>
+</div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

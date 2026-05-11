@@ -128,6 +128,10 @@ Altere sua senha
 
 📁 Estrutura do Projeto
 text
+<<<<<<< HEAD
+=======
+
+>>>>>>> 856ab91ecef96d20660a663e93d17a3a0c0c4b76
 MaxVeiculos/
 ├── admin/
 │   ├── assets/
@@ -158,6 +162,7 @@ MaxVeiculos/
 │   └── schema.sql
 ├── .htaccess
 └── README.md
+
 🗂️ Banco de Dados
 Tabelas Criadas
 admin - Usuários administradores

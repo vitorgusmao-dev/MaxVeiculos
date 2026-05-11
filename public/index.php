@@ -74,7 +74,6 @@ foreach ($veiculos_destaque as $veiculo) {
                     <li class="nav-item">
                         <a class="nav-link" href="#contato">Contato</a>
                     </li>
-                    <!-- Botão Admin REMOVIDO por segurança -->
                 </ul>
             </div>
         </div>
@@ -98,6 +97,7 @@ foreach ($veiculos_destaque as $veiculo) {
                     <?php foreach ($banners as $banner): ?>
                         <div class="swiper-slide">
                             <?php if ($banner['imagem_path']): ?>
+                                <!-- CORREÇÃO AQUI: caminho sem duplicação -->
                                 <img src="<?php echo BASE_URL; ?>/public/uploaded_images/<?php echo $banner['imagem_path']; ?>" alt="<?php echo $banner['titulo']; ?>">
                             <?php endif; ?>
                             <div class="banner-content">
@@ -138,6 +138,7 @@ foreach ($veiculos_destaque as $veiculo) {
                             <div class="veiculo-card">
                                 <div class="veiculo-imagem">
                                     <?php if ($fotos_veiculos[$veiculo['id']] ?? null): ?>
+                                        <!-- CORREÇÃO AQUI: caminho sem duplicação -->
                                         <img src="<?php echo BASE_URL; ?>/public/uploaded_images/<?php echo $fotos_veiculos[$veiculo['id']]; ?>" alt="<?php echo $veiculo['modelo']; ?>">
                                     <?php else: ?>
                                         <img src="https://via.placeholder.com/400x250?text=Sem+Foto" alt="Sem foto">
