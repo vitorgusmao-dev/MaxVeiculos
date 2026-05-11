@@ -159,6 +159,7 @@ MaxVeiculos/
 │   └── veiculos.php
 ├── .htaccess
 └── README.md
+```
 
 🗂️ Banco de Dados
 Tabelas Criadas
